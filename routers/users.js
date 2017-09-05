@@ -26,7 +26,7 @@ app.use('/admin',admin);
 app.get('/txtRead',function (req, res){
     fs.readFile('public/read.txt', function(err, data){
         if(err)
-            throw arr;
+            throw err;
        // debugger;
         res.send(data.toString());
     })
