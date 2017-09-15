@@ -8,6 +8,7 @@ const app = express();
 
 const users = require('./routers/users');
 const tasks = require('./routers/tasks');
+const jwtPoc = require('./routers/JWTpoc');
 
 // port no.
 const port = 3000;
@@ -26,6 +27,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.use('/', tasks);
+
+app.use('/jwt', jwtPoc);
 
 // index Route
 app.get('/achal', (req, res) =>{

@@ -7,9 +7,9 @@ var fs = require('fs');
 
 app.use(express.static('public'));
 //register
-// router.get('/', (req, res, next) => {
-//     res.send('Index');
-// });
+router.get('/', (req, res, next) => {
+    res.send('Index');
+});
 //app.locals.a = 'achal';
 //console.log('name'+app.locals);
 admin.get('/',function(req,res){
@@ -32,7 +32,7 @@ app.get('/txtRead',function (req, res){
     })
 })
 
-app.listen(2000);
+//app.listen(2000);
 
 router.get('/register', (req, res, next) => {
     res.send('Register');
